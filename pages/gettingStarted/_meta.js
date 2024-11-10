@@ -1,5 +1,5 @@
 export default {
-    invbot: 'Inviting The Bot',
-    intconfig: 'Intial Config',
-    test: 'Testing The Bot',
+    invbot: '📥 Inviting The Bot',
+    confbot: '⚙️ Intial Config',
+    testbot: '⚒️ Testing The Bot',
 }

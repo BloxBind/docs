@@ -1,0 +1,38 @@
+# 🛠 Testing the Bot After Setup
+
+After setting up the **Roblox-Discord Linking Bot**, it’s important to verify that everything works as expected. Here’s a quick guide to ensure that linking and verification features are functional.
+
+## 📋 Basic Testing Steps
+
+1. **Link a Test Account**  
+   Use a test Discord account (or a trusted member’s account) to run the linking command:
+   
+   ```plaintext
+   /link
+   ```
+   
+   Follow the prompts to link a Roblox account with Discord. Make sure the bot responds correctly and initiates the verification process.
+
+2. **Verify Role Assignment**  
+   After the linking command completes, check the Discord server to confirm that the **verified role** is correctly assigned to the test account. This step ensures that the bot has the proper permissions to assign roles.
+
+3. **Test Group-Based Role Syncing**  
+   If you’ve configured group-based role syncing, confirm that the bot can detect the linked user’s roles from Roblox and assign the corresponding roles in Discord.
+
+4. **Check Verification Logs**  
+   If the bot logs verification actions to a specific channel, check that it logs the test account’s linking status. This is useful for tracking and troubleshooting in larger servers.
+
+5. **Use Admin Commands**  
+   If you have admin commands for managing bot configurations, test one to confirm it functions properly:
+
+   ```plaintext
+   /config view
+   ```
+   
+   This command should display the bot’s current settings, confirming that admin commands are operational.
+
+## ⚠️ Troubleshooting Tips
+
+- **Permissions**: If roles aren’t assigned, ensure that the bot has the correct permissions (e.g., managing roles).
+- **Verification Issues**: If linking doesn’t complete, confirm that the Roblox account is correctly set up and that any specified group ID is accurate.
+- **Error Logs**: If you experience any errors, check the bot’s error logs (if available) or consult the support server for assistance.
