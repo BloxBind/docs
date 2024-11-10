@@ -1,4 +1,4 @@
 export default {
-    index: 'Intoduction',
-    gettingStarted: '⚒️ Getting Started',
+    index: '👋 Intoduction',
+    gettingstarted: '⚒️ Getting Started',
 }
