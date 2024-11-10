@@ -1,0 +1,65 @@
+import DiscordEmbed from '../components/DiscordEmbed';
+import DiscordMessage from '../components/DiscordMessage';
+
+# 🔨 Tools
+Show cases some of the components that are available in the docs.
+
+## 📚 Components
+
+### DiscordEmbed
+    <div style={{ padding: '1rem !important' }} >
+<DiscordEmbed
+  author={{ name: 'Discord Bot', iconUrl: 'https://cdn.bocon.wtf/u/1cr2Tw6x.png', url: 'https://example.com' }}
+  title="Hello, World!"
+  description="This is an example of a full-feature Discord embed component with title, description, and more."
+  fields={[
+    { name: 'Field 1', value: 'Some value', inline: true },
+    { name: 'Field 2', value: 'Another value', inline: true },
+    { name: 'Field 3', value: 'More data here' },
+  ]}
+  imageUrl="https://cdn.bocon.wtf/u/1cr2Tw6x.png"
+  thumbnailUrl="https://cdn.bocon.wtf/u/1cr2Tw6x.png"
+  footer={{ text: 'Footer text', iconUrl: 'https://cdn.bocon.wtf/u/1cr2Tw6x.png' }}
+  buttons={[
+    { label: 'Primary Button', style: 'primary' },
+    { label: 'Secondary Button', style: 'secondary' },
+    { label: 'Danger Button', style: 'danger' },
+  ]}
+/>
+    </div>
+
+### DiscordMessage
+
+    <div style={{ padding: '1rem !important' }} >
+<DiscordMessage
+  author={{
+    name: 'Example Bot',
+    avatarUrl: 'https://cdn.bocon.wtf/u/1cr2Tw6x.png',
+    isBot: true,
+  }}
+  messageContent="Hello! This is a Discord-style message component."
+  timestamp="10:30 AM"
+/>
+    </div>
+
+    <div style={{ padding: '1rem !important' }} >
+<DiscordMessage
+  author={{ name: 'Bocon', avatarUrl: 'https://cdn.bocon.wtf/u/7QNrP7UZ.jpeg', roleBadge: 'THV' }}
+  messageContent="false"
+  timestamp="11/7/2024 7:48 PM"
+  replyTo={{
+    author: { name: 'BloxBind', avatarUrl: 'https://cdn.bocon.wtf/u/1cr2Tw6x.png' },
+    messageContent: 'ur dumb as hell boy',
+  }}
+/>
+    </div>
+    
+    <div style={{ padding: '1rem !important' }} >
+<DiscordMessage
+  author={{ name: 'BloxBind Helper', avatarUrl: 'https://cdn.bocon.wtf/u/1cr2Tw6x.png', isBot: true }}
+  messageContent="Started recording!"
+  timestamp="10/18/2024 9:08 PM"
+  slashCommand="join"
+  isSlashCommandReply={true}
+/>
+    </div>
