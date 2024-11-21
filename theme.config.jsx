@@ -1,8 +1,48 @@
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
-
+import { title } from 'process'
 
 export default {
+  head: function useHead() {
+    const config = useConfig()
+    const { route } = useRouter()
+    const isDefault = route === '/' || !config.title
+
+    const description =
+      config.frontMatter.description ||
+      'Documentation for BloxBind, a tool for creating and managing Roblox games.'
+    const title = config.title + (route === '/' ? '' : ' - BloxBind')
+
+    return (
+      <>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site:domain" content="bloxbind.com" />
+        <meta name="twitter:url" content="https://bloxbind.com" />
+        <meta name="apple-mobile-web-app-title" content="BloxBind" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link
+          rel="icon"
+          href="/favicon.svg"
+          type="image/svg+xml"
+          media="(prefers-color-scheme: dark)"
+        />
+        <link
+          rel="icon"
+          href="/favicon.png"
+          type="image/png"
+          media="(prefers-color-scheme: dark)"
+        />
+      </>
+    )
+  },
     docsRepositoryBase: 'https://github.com/BloxBind/docs/tree/main',
     logo: <span>BloxBind Documentation</span>,
     project: {
